@@ -1,4 +1,4 @@
-ftp-password: ${{ secrets.FTP_PASSWORD }}
+# ftp-password: ${{ secrets.FTP_PASSWORD }}
 
 on: push
 name: Publish Website
@@ -14,5 +14,5 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           ftp-server: ftp://ftp.example.com:21/public_html
-          ftp-username: userna5
+          ftp-username: marketingminions
           ftp-password: ${{ secrets.FTP_PASSWORD }}
