@@ -4,6 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/marketingmin21/public_html/
     - /bin/cp -R images $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp index.css $DEPLOYPATH
 #     Deploy an entire directory
 # The following .cpanel.yml file copies the images directory and all of its contents to the example account’s public_html directory:
 # https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/
