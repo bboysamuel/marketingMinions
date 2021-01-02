@@ -1,0 +1,19 @@
+{
+  "name": "marketingminions",
+  "version": "1.0.0",
+  "description": "this is a simple under construction template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bboysamuel/marketingMinions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bboysamuel/marketingMinions/issues"
+  },
+  "homepage": "https://github.com/bboysamuel/marketingMinions#readme"
+}
